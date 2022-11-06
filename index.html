@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="script/script.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body>
+   <div class="containerDiv">
+      <div class="container cameraPage" id="cameraPage">
+         <video class="video" id="video" autoplay></video>
+      </div>
+
+
+      <!-- Partie en dessous de la photo -->
+      <div id="panel">
+         <canvas class="canvas" id="canvas" style="display: none"></canvas>
+         <button class="click-photo" id="click-photo" style="margin-left: auto;margin-right: auto;">Prendre une Photo</button>
+
+
+
+         <div id="field_name" style="display: none">
+            <h4 id="Nom"></h4>
+            <p id="Description"></p>
+            <a href="#" id="wikilink">Pour en apprendre plus, cliquez ici!</a>
+
+            <div>
+               <h5 class="similar">Photos simillaires :</h5>
+               <div id="lien" class="section">
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+      <div class="container homePage" style="display: none;">
+         <p>HOME PAGE</p>
+      </div>
+   
+      <div class="container galleryPage" style="display: none;">
+         <p>GALLERY PAGE</p>
+      </div>
+
+      <div class="container menuPage" style="display: none;">
+         <p>MENU PAGE</p>
+      </div>
+   </div>
+
+   <div id="empty" style="margin-top: 10%;"></div>
+
+   <div class="navigation">
+      <ul>
+         <li class="list">
+            <a href="#" onclick="getPageMenu('homePage')">
+               <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+               </span>
+               <span class="text">Home</span>
+            </a>
+         </li>
+         <li class="list">
+            <a href="#">
+               <span class="icon">
+                  <ion-icon name="medkit-outline"></ion-icon>
+               </span>
+               <span class="text">Malette</span>
+            </a>
+         </li>
+         <li class="list active">
+            <a href="#" onclick="getPageMenu('cameraPage')">
+               <span class="icon">
+                  <!--<button id="click-photo">
+                     <img src="photo.svg" alt="photo" class="photo">
+                  </button>
+               -->
+                  <ion-icon name="camera-outline"></ion-icon>
+               </span>
+               <span class="text">Screenshot</span>
+            </a>
+         </li>
+         <li class="list">
+            <a href="#" onclick="getPageMenu('galleryPage')">
+               <span class="icon">
+                  <ion-icon name="flower-outline"></ion-icon>
+               </span>
+               <span class="text">Galerie</span>
+            </a>
+         </li>
+         <li class="list">
+            <a href="#" onclick="getPageMenu('menuPage')">
+               <span class="icon">
+                  <ion-icon name="menu-outline"></ion-icon>
+               </span>
+               <span class="text">Menu</span>
+            </a>
+         </li>
+         <!-- <div class="indicator"></div> -->
+      </ul>
+   </div>
+   
+
+<!--
+
+   <div id="panel">
+      <canvas id="canvas" width="auto" height="auto"></canvas>
+      <div id="field_name">
+         <h4 id="Nom"></h4>
+         <p id="Description"></p>
+         <div>
+            <h5 class="similar">Photos simillaires :</h5>
+            <p id="lien"></p>
+            <p id="image"></p>
+         </div>
+      </div>
+   </div>
+
+   <div class="navbar">
+      <img src="maison.svg" alt="maison" class="maison">
+      <img src="malette.svg" alt="malette" class="malette">
+      <button id="click-photo"><img src="photo.svg" alt="photo" class="photo"></button>
+      <img src="fleur.svg" alt="fleur" class="fleur">
+      <img src="hamburger.svg" alt="hamburger" class="hamburger">
+   </div>
+-->
+</body>
+
+
+</html>
